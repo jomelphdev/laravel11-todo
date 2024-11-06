@@ -1,0 +1,13 @@
+php artisan make:migration create_tasks_table
+
+
+open config/database.php and change the database connection from sqlite to mysql
+
+php artisan config:clear
+php artisan config:cache
+php artisan migrate
+
+php artisan make:model Task -cr
+
+generate api.php
+php artisan install:api
